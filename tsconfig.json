@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "cc-qrcode": [
+        "dist/cc-qrcode"
+      ],
+      "cc-qrcode/*": [
+        "dist/cc-qrcode/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

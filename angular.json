@@ -119,6 +119,47 @@
           }
         }
       }
-    }},
+    },
+    "cc-qrcode": {
+      "projectType": "library",
+      "root": "projects/cc-qrcode",
+      "sourceRoot": "projects/cc-qrcode/src",
+      "prefix": "cc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cc-qrcode/tsconfig.lib.json",
+            "project": "projects/cc-qrcode/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/cc-qrcode/ng-package.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cc-qrcode/src/test.ts",
+            "tsConfig": "projects/cc-qrcode/tsconfig.spec.json",
+            "karmaConfig": "projects/cc-qrcode/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cc-qrcode/tsconfig.lib.json",
+              "projects/cc-qrcode/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "cc-qrcode-demo"
 }
